@@ -10,8 +10,6 @@ const JetBrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Security Private Chat",
   description: "Security Private Chat",
-  authors: [ { name: "7alexandree7", url: "https://github.com/7alexandree7"}]
-
 };
 
 export default function RootLayout({
