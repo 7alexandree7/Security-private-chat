@@ -3,7 +3,7 @@
 import { client } from "@/lib/client"
 import { useMutation } from "@tanstack/react-query"
 import { nanoid } from "nanoid"
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 
 
