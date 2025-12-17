@@ -20,10 +20,12 @@ export const proxy = async (req: NextRequest) => {
 
     const existingToken = req.cookies.get("x-auth-token")?.value
 
+    // USER IS ALLOWED TO JOIN ROOM
     if (existingToken && meta.connected.includes(existingToken)) {
         return NextResponse.next()
     }
 
+    // USER IS NOT ALLOWED TO JOIN
     if (meta.connected.length >= 2) {
         return NextResponse.redirect(new URL("/?error=room-full", req.url))
     }
